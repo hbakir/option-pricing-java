@@ -17,10 +17,45 @@ This project is part of a personal journey back into equity derivatives, with a 
 ## 🚀 Getting Started
 
 1. **Fork** the repository.
-2. **Clone** your fork and set up the project locally.
-3. Use **Maven** or **Gradle** to build and test.
+2. **Clone** your fork locally and checkout the `main` branch:
 
-Example (using Maven):
+   ```bash
+   git clone https://github.com/<your-username>/option-pricing-java.git
+   cd option-pricing-java
+   ```
+3. Use the Gradle wrapper (`./gradlew`) as the primary build tool to compile and run tests:
+
+   ```bash
+   ./gradlew clean check
+   ```
+
+4. To launch the application locally:
+
+   ```bash
+   ./gradlew bootRun
+   ```
+
+## 🧪 Running Tests
+
+All tests are written in Groovy using the Spock framework. To run specific suites:
 
 ```bash
-mvn clean install
+# Unit tests
+./gradlew test
+
+# Integration tests
+./gradlew integrationTest
+
+# End-to-end tests
+./gradlew e2eTest
+
+# Or run them all (unit + integration + e2e)
+./gradlew check
+```
+
+## 📝 Pull Request Guidelines
+
+- Create feature branches from `main` (e.g., `feature/add-black-scholes`).
+- Write clear, descriptive commit messages and reference any related issues.
+- Ensure all tests pass before pushing: `./gradlew clean check`.
+- Open a pull request targeting the `main` branch and describe your changes.

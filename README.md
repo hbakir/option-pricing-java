@@ -11,6 +11,10 @@ tech mindset.
 - ✅ Implied volatility solver (coming soon)
 - ✅ CLI or REST interface (planned)
 - ✅ 100% unit tested
+## Prerequisites
+
+- Java 17 or higher
+- Git
 
 ## Usage
 
@@ -23,6 +27,21 @@ BlackScholesCalculator.calcPrice(
     riskFreeRate,
     volatility
 );
+```
+
+## Running the application
+
+You can start the Spring Boot service via the Gradle wrapper:
+
+```bash
+./gradlew bootRun
+```
+
+By default, the server listens on port 8080. Check health with:
+
+```bash
+curl http://localhost:8080/
+# OK
 ```
 
 ## Motivation
@@ -40,19 +59,23 @@ Copyright (c) 2025 Hicham BAKIR
 
 ## Building and Testing
 
-Use the Gradle Wrapper to build and test the project:
+Use the included Gradle wrapper (`./gradlew`) as the main build tool to compile and test:
 
 ```bash
 ./gradlew clean check
 ```
 
-Tests are organized into:
+Tests are written in Groovy using the Spock framework and organized into:
 
-- **Unit tests** (src/test/groovy)
-- **Integration tests** (src/integrationTest/groovy)
-- **End-to-end tests** (src/e2eTest/groovy)
+- **Unit tests** (`src/test/groovy`)
+- **Integration tests** (`src/integrationTest/groovy`)
+- **End-to-end tests** (`src/e2eTest/groovy`)
 
 ## Continuous Integration
 
 A GitHub Actions workflow is configured in `.github/workflows/ci.yml` to run tests on push and pull requests to `main`. Merges to `main` should require passing this CI.
+
+## Contributing & Code of Conduct
+
+Contributions are welcome! Please review [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute, and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for community standards.
 
