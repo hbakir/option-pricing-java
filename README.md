@@ -38,3 +38,21 @@ Copyright (c) 2025 Hicham BAKIR
 
 📌 Note: This project is released under the MIT License. Attribution is appreciated. Use responsibly.
 
+## Building and Testing
+
+Use the Gradle Wrapper to build and test the project:
+
+```bash
+./gradlew clean check
+```
+
+Tests are organized into:
+
+- **Unit tests** (src/test/groovy)
+- **Integration tests** (src/integrationTest/groovy)
+- **End-to-end tests** (src/e2eTest/groovy)
+
+## Continuous Integration
+
+A GitHub Actions workflow is configured in `.github/workflows/ci.yml` to run tests on push and pull requests to `main`. Merges to `main` should require passing this CI.
+
