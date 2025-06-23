@@ -1,4 +1,6 @@
-package io.bakir.lab.derivatives;
+package io.bakir.lab.derivatives.pricing;
+
+import io.bakir.lab.derivatives.model.OptionType;
 
 /**
  * Implements the Black-Scholes pricing formula for European call and put options.

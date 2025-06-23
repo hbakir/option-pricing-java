@@ -44,6 +44,36 @@ curl http://localhost:8080/
 # OK
 ```
 
+## Pricing API
+
+Retrieve option prices and Greeks via REST:
+
+```bash
+curl -X POST http://localhost:8080/api/option \
+  -H "Content-Type: application/json" \
+  -d '{
+    "type":"CALL",
+    "spot":100.0,
+    "strike":100.0,
+    "timeToMaturity":1.0,
+    "riskFreeRate":0.05,
+    "volatility":0.2
+  }'
+```
+
+Sample JSON response:
+
+```json
+{
+  "price":10.4506,
+  "delta":0.636831,
+  "gamma":0.018762,
+  "vega":37.524035,
+  "theta":-6.414028,
+  "rho":53.232483
+}
+```
+
 ## Motivation
 
 I worked on the exotic derivatives desk in the late 90s as a UI developer. This is my way of returning — not as a trader

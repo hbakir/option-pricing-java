@@ -1,5 +1,7 @@
 package io.bakir.lab.derivatives
 
+import io.bakir.lab.derivatives.model.OptionType
+import io.bakir.lab.derivatives.pricing.BlackScholesCalculator
 import spock.lang.Specification
 
 class BlackScholesCalculatorSpec extends Specification {
